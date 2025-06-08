@@ -1,0 +1,97 @@
+git 
+pwd
+clear
+q - to quit from git log
+ls
+.gitignore file
+.gitkeep file
+
+git config --list
+git config --global user.name "your-name"
+git config --global user.email "your-email"
+
+git log
+git log --oneline
+git reflog 
+git reflog <commit-id>
+git status
+
+git init
+git add <file-name>
+git add <file-name-1> <file-name-2>
+git add .
+git restore --staged <branch-name>
+git commit -m "your commit message"
+git commit -am "your commit message"
+
+git revert <commit-id>                       // -------> revert don't delete commit & create commit
+git revert --abort                           
+git reset --hard <commit-id>		     //--------> reset deletes commit 
+git reset --hard HEAD~<HEAD-index>
+git checkout <commit-id>		     //--------> only checkout, not delete
+
+git branch 
+git branch <branch-name>
+git switch <branch-name>
+git switch -c <branch-name>
+git branch -d <branch-name>
+git switch main
+git branch -m <old-branch-name> <new-branch-name>
+git branch -m <new-branch-name>
+git checkout <branch-name>
+
+git merge <branch-name>
+git merge --abort			// ----------> abort when conflicts
+
+git rebase <branch-name>     ----->  generally not execute from main branch. so, branch-name is main branch.
+
+git diff
+git diff --staged
+git diff <commit-id-1>..<commit-id-2> or git diff <commit-id-1> <commit-id-2> 
+git diff <branch-name-1>..<branch-name-2> or git diff <branch-name-1> <branch-name-2>
+
+git stash 
+git stash save "message for stash"
+git stash apply 
+git stash apply <stash stack index> or git stash apply stash@{0}
+git stash apply stash@{0} <branch-name>
+git stash pop
+git stash drop
+git stash list 
+git stash clear
+
+
+git tag 
+git tag <tag-name>
+git tag -a <tag-name> -m "message for tag"
+git tag <tag-name> <commit-id>
+git tag -d <tag-name>
+git push origin <tag-name>
+git push origin :<tag-name>
+
+
+for GitHub
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC9yjAHFq3S7b6x3uH/XH4r90xmWBNO++7Mt+0RiILR0 chauhanhirenec1@gmail.com
+
+//------>  below, origin is remote.
+push - main to main , here branch-name is from local git repo.
+pull - main to any ,  here branch-name is from GitHub repo.
+
+git remote -v
+git remote add origin https://github.com/HirenChauhanec1/test-repo.git
+
+git push origin <branch-name>	
+git pull origin <branch-name>
+git fetch origin
+git merge <branch-name>	
+	
+git push --set-upstream origin <branch-name>      or     git push -u origin <branch-name>						
+git push
+git pull	
+git fetch
+git merge
+
+git pull = git fetch + git merge
+
+git clone <remote-Uri> or git clone origin
